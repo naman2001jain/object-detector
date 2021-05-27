@@ -1,24 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DDs-Cf-TDq">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="hotdog_detector" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vgq-Jb-m3t">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vjI-0H-vk7">
+                                        <rect key="frame" x="15" y="0.0" width="384" height="694"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No image selected." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZQ-Ye-lhD" userLabel="aboutTheImage">
+                                        <rect key="frame" x="15" y="694" width="384" height="28"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNH-FO-Vjq" userLabel="imageSelectorView">
+                                        <rect key="frame" x="152" y="744" width="110" height="110"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CE7-ac-DOf">
+                                                <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="camera.fill" catalog="system" symbolScale="large"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                    </preferredSymbolConfiguration>
+                                                </state>
+                                                <connections>
+                                                    <action selector="selectImageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ctu-PP-7FQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <constraints>
+                                            <constraint firstItem="CE7-ac-DOf" firstAttribute="centerY" secondItem="lNH-FO-Vjq" secondAttribute="centerY" id="ZaG-4J-gF5"/>
+                                            <constraint firstItem="CE7-ac-DOf" firstAttribute="height" secondItem="lNH-FO-Vjq" secondAttribute="height" id="aTc-9T-RHB"/>
+                                            <constraint firstItem="CE7-ac-DOf" firstAttribute="centerX" secondItem="lNH-FO-Vjq" secondAttribute="centerX" id="cn2-yK-50q"/>
+                                            <constraint firstItem="CE7-ac-DOf" firstAttribute="width" secondItem="lNH-FO-Vjq" secondAttribute="width" id="wEI-Sf-5Xu"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="vjI-0H-vk7" firstAttribute="top" secondItem="Vgq-Jb-m3t" secondAttribute="top" id="1mr-RY-jYV"/>
+                                    <constraint firstItem="MZQ-Ye-lhD" firstAttribute="top" secondItem="vjI-0H-vk7" secondAttribute="bottom" id="63V-CA-CAr"/>
+                                    <constraint firstItem="lNH-FO-Vjq" firstAttribute="width" secondItem="Vgq-Jb-m3t" secondAttribute="width" multiplier="0.2657" id="9zI-TP-uWn"/>
+                                    <constraint firstAttribute="trailing" secondItem="MZQ-Ye-lhD" secondAttribute="trailing" constant="15" id="aU7-6c-2k6"/>
+                                    <constraint firstItem="lNH-FO-Vjq" firstAttribute="centerX" secondItem="Vgq-Jb-m3t" secondAttribute="centerX" id="b2l-pe-d23"/>
+                                    <constraint firstAttribute="trailing" secondItem="vjI-0H-vk7" secondAttribute="trailing" constant="15" id="eYP-a4-L5I"/>
+                                    <constraint firstItem="vjI-0H-vk7" firstAttribute="height" secondItem="Vgq-Jb-m3t" secondAttribute="height" multiplier="0.7745" id="gRk-0d-Qwg"/>
+                                    <constraint firstItem="vjI-0H-vk7" firstAttribute="leading" secondItem="Vgq-Jb-m3t" secondAttribute="leading" constant="15" id="iXw-fh-SUS"/>
+                                    <constraint firstItem="lNH-FO-Vjq" firstAttribute="height" secondItem="Vgq-Jb-m3t" secondAttribute="height" multiplier="0.122768" id="mHg-4S-HxK"/>
+                                    <constraint firstItem="MZQ-Ye-lhD" firstAttribute="leading" secondItem="Vgq-Jb-m3t" secondAttribute="leading" constant="15" id="vMW-Tg-SwG"/>
+                                    <constraint firstAttribute="bottom" secondItem="lNH-FO-Vjq" secondAttribute="bottom" constant="42" id="ynb-TF-dXE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vgq-Jb-m3t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="053-NG-LKr"/>
+                            <constraint firstAttribute="bottom" secondItem="Vgq-Jb-m3t" secondAttribute="bottom" id="10z-SN-GKk"/>
+                            <constraint firstItem="Vgq-Jb-m3t" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="V48-4O-PmC"/>
+                            <constraint firstItem="Vgq-Jb-m3t" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="j84-gR-ZNq"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="TQ6-ja-7ah"/>
+                    <connections>
+                        <outlet property="aboutTheImage" destination="MZQ-Ye-lhD" id="Sbw-zN-GWb"/>
+                        <outlet property="imageDiscriptionLabel" destination="MZQ-Ye-lhD" id="qY7-rf-DW1"/>
+                        <outlet property="imageSelectorView" destination="lNH-FO-Vjq" id="PPO-l3-scq"/>
+                        <outlet property="userSelectedImageView" destination="vjI-0H-vk7" id="1G1-f1-lrh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1000.0000000000001" y="70.982142857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YCg-tJ-lgk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="DDs-Cf-TDq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JDb-5I-MR1">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f5c-Ib-7We">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="d7l-wK-8wZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kdf-eo-1F8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89.855072463768124" y="70.982142857142847"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
