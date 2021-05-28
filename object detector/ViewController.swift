@@ -25,8 +25,8 @@ class ViewController: UIViewController,UINavigationControllerDelegate,UIImagePic
         self.setupImageView()
         self.setupCameraView()
         imagePicker.delegate = self
-        
         imagePicker.allowsEditing = false
+        imageDiscriptionLabel.layer.cornerRadius = 10
     }
     
     

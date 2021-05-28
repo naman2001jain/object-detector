@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EDC6A6FB265F79F000BD5D2F /* hotdog detector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hotdog detector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDC6A6FB265F79F000BD5D2F /* object detector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "object detector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDC6A6FE265F79F000BD5D2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDC6A700265F79F000BD5D2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EDC6A702265F79F000BD5D2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 		EDC6A6F2265F79EF00BD5D2F = {
 			isa = PBXGroup;
 			children = (
-				EDC6A6FD265F79F000BD5D2F /* hotdog detector */,
+				EDC6A6FD265F79F000BD5D2F /* object detector */,
 				EDC6A6FC265F79F000BD5D2F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,12 +51,12 @@
 		EDC6A6FC265F79F000BD5D2F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EDC6A6FB265F79F000BD5D2F /* hotdog detector.app */,
+				EDC6A6FB265F79F000BD5D2F /* object detector.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EDC6A6FD265F79F000BD5D2F /* hotdog detector */ = {
+		EDC6A6FD265F79F000BD5D2F /* object detector */ = {
 			isa = PBXGroup;
 			children = (
 				EDC6A716265FAAB200BD5D2F /* hotdog detector.entitlements */,
@@ -69,15 +69,15 @@
 				EDC6A70C265F79F800BD5D2F /* Info.plist */,
 				EDC6A713265F7B8400BD5D2F /* Inceptionv3.mlmodel */,
 			);
-			path = "hotdog detector";
+			path = "object detector";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EDC6A6FA265F79EF00BD5D2F /* hotdog detector */ = {
+		EDC6A6FA265F79EF00BD5D2F /* object detector */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EDC6A70F265F79F800BD5D2F /* Build configuration list for PBXNativeTarget "hotdog detector" */;
+			buildConfigurationList = EDC6A70F265F79F800BD5D2F /* Build configuration list for PBXNativeTarget "object detector" */;
 			buildPhases = (
 				EDC6A6F7265F79EF00BD5D2F /* Sources */,
 				EDC6A6F8265F79EF00BD5D2F /* Frameworks */,
@@ -87,9 +87,9 @@
 			);
 			dependencies = (
 			);
-			name = "hotdog detector";
+			name = "object detector";
 			productName = "hotdog detector";
-			productReference = EDC6A6FB265F79F000BD5D2F /* hotdog detector.app */;
+			productReference = EDC6A6FB265F79F000BD5D2F /* object detector.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -106,7 +106,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EDC6A6F6265F79EF00BD5D2F /* Build configuration list for PBXProject "hotdog detector" */;
+			buildConfigurationList = EDC6A6F6265F79EF00BD5D2F /* Build configuration list for PBXProject "object detector" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -119,7 +119,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EDC6A6FA265F79EF00BD5D2F /* hotdog detector */,
+				EDC6A6FA265F79EF00BD5D2F /* object detector */,
 			);
 		};
 /* End PBXProject section */
@@ -292,15 +292,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "hotdog detector/hotdog detector.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "object detector/object detector.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2YZB8B988D;
-				INFOPLIST_FILE = "hotdog detector/Info.plist";
+				INFOPLIST_FILE = "object detector/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Naman-iosdev.hotdog-detector";
+				PRODUCT_BUNDLE_IDENTIFIER = "Naman-iosdev.object-detector";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
@@ -313,15 +313,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "hotdog detector/hotdog detector.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "object detector/object detector.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2YZB8B988D;
-				INFOPLIST_FILE = "hotdog detector/Info.plist";
+				INFOPLIST_FILE = "object detector/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Naman-iosdev.hotdog-detector";
+				PRODUCT_BUNDLE_IDENTIFIER = "Naman-iosdev.object-detector";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
@@ -332,7 +332,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EDC6A6F6265F79EF00BD5D2F /* Build configuration list for PBXProject "hotdog detector" */ = {
+		EDC6A6F6265F79EF00BD5D2F /* Build configuration list for PBXProject "object detector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EDC6A70D265F79F800BD5D2F /* Debug */,
@@ -341,7 +341,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EDC6A70F265F79F800BD5D2F /* Build configuration list for PBXNativeTarget "hotdog detector" */ = {
+		EDC6A70F265F79F800BD5D2F /* Build configuration list for PBXNativeTarget "object detector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EDC6A710265F79F800BD5D2F /* Debug */,
