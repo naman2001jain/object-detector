@@ -56,15 +56,42 @@
                                             <constraint firstItem="CE7-ac-DOf" firstAttribute="width" secondItem="lNH-FO-Vjq" secondAttribute="width" id="wEI-Sf-5Xu"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GZB-ut-Qpa" userLabel="photos select from gallery">
+                                        <rect key="frame" x="289" y="744" width="110" height="110"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ite-DO-u5L">
+                                                <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="photo.on.rectangle.fill" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="51"/>
+                                                    </preferredSymbolConfiguration>
+                                                </state>
+                                                <connections>
+                                                    <action selector="galleryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y5u-JL-zno"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Ite-DO-u5L" firstAttribute="width" secondItem="GZB-ut-Qpa" secondAttribute="width" id="XNo-Z9-bif"/>
+                                            <constraint firstItem="Ite-DO-u5L" firstAttribute="height" secondItem="GZB-ut-Qpa" secondAttribute="height" id="ZGO-kx-keo"/>
+                                            <constraint firstItem="Ite-DO-u5L" firstAttribute="centerY" secondItem="GZB-ut-Qpa" secondAttribute="centerY" id="tVW-hP-UwX"/>
+                                            <constraint firstItem="Ite-DO-u5L" firstAttribute="centerX" secondItem="GZB-ut-Qpa" secondAttribute="centerX" id="vT4-rQ-Z7R"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="vjI-0H-vk7" firstAttribute="top" secondItem="Vgq-Jb-m3t" secondAttribute="top" id="1mr-RY-jYV"/>
                                     <constraint firstItem="MZQ-Ye-lhD" firstAttribute="top" secondItem="vjI-0H-vk7" secondAttribute="bottom" id="63V-CA-CAr"/>
+                                    <constraint firstItem="GZB-ut-Qpa" firstAttribute="height" secondItem="CE7-ac-DOf" secondAttribute="height" id="7HX-bJ-EAS"/>
                                     <constraint firstItem="lNH-FO-Vjq" firstAttribute="width" secondItem="Vgq-Jb-m3t" secondAttribute="width" multiplier="0.2657" id="9zI-TP-uWn"/>
+                                    <constraint firstAttribute="trailing" secondItem="GZB-ut-Qpa" secondAttribute="trailing" constant="15" id="KbG-Tl-BW7"/>
+                                    <constraint firstAttribute="bottom" secondItem="GZB-ut-Qpa" secondAttribute="bottom" constant="42" id="a93-oy-18E"/>
                                     <constraint firstAttribute="trailing" secondItem="MZQ-Ye-lhD" secondAttribute="trailing" constant="15" id="aU7-6c-2k6"/>
                                     <constraint firstItem="lNH-FO-Vjq" firstAttribute="centerX" secondItem="Vgq-Jb-m3t" secondAttribute="centerX" id="b2l-pe-d23"/>
                                     <constraint firstAttribute="trailing" secondItem="vjI-0H-vk7" secondAttribute="trailing" constant="15" id="eYP-a4-L5I"/>
+                                    <constraint firstItem="GZB-ut-Qpa" firstAttribute="leading" secondItem="lNH-FO-Vjq" secondAttribute="trailing" constant="27" id="g1g-01-exB"/>
                                     <constraint firstItem="vjI-0H-vk7" firstAttribute="height" secondItem="Vgq-Jb-m3t" secondAttribute="height" multiplier="0.7745" id="gRk-0d-Qwg"/>
                                     <constraint firstItem="vjI-0H-vk7" firstAttribute="leading" secondItem="Vgq-Jb-m3t" secondAttribute="leading" constant="15" id="iXw-fh-SUS"/>
                                     <constraint firstItem="lNH-FO-Vjq" firstAttribute="height" secondItem="Vgq-Jb-m3t" secondAttribute="height" multiplier="0.122768" id="mHg-4S-HxK"/>
@@ -117,6 +144,7 @@
     </scenes>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <image name="photo.on.rectangle.fill" catalog="system" width="128" height="96"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

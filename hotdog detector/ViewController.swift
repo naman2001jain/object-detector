@@ -18,13 +18,14 @@ class ViewController: UIViewController,UINavigationControllerDelegate,UIImagePic
     @IBOutlet weak var imageDiscriptionLabel: UILabel!
     @IBOutlet weak var aboutTheImage: UILabel!
     
+    
     var imagePicker = UIImagePickerController()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupImageView()
         self.setupCameraView()
         imagePicker.delegate = self
-        imagePicker.sourceType = .camera
+        
         imagePicker.allowsEditing = false
     }
     
@@ -32,12 +33,12 @@ class ViewController: UIViewController,UINavigationControllerDelegate,UIImagePic
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let userPickedImage = info[.originalImage] as? UIImage{
             userSelectedImageView.image = userPickedImage
-            
+
             guard let ciImage = CIImage(image: userPickedImage) else{
                 fatalError("couldn't convert UIImage to CIImage.")
             }
             detect(image: ciImage)
-            
+
         }
         imagePicker.dismiss(animated: true, completion: nil)
     }
@@ -45,12 +46,17 @@ class ViewController: UIViewController,UINavigationControllerDelegate,UIImagePic
     
     //setup Functions
     @IBAction func selectImageButtonPressed(_ sender: UIButton) {
+        imagePicker.sourceType = .camera
         present(imagePicker, animated: true, completion: nil)
     }
-    
+    @IBAction func galleryButtonPressed(_ sender: UIButton) {
+        
+        imagePicker.sourceType = .savedPhotosAlbum
+        present(imagePicker, animated: true,completion: nil)
+    }
     
     func detect(image: CIImage){
-        
+
         //setup vision with a coreml model
         guard let model = try? VNCoreMLModel(for: Inceptionv3().model) else{
             fatalError("couldn't load core ml model.")
