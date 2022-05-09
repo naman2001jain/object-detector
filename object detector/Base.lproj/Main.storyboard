@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DDs-Cf-TDq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DDs-Cf-TDq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -12,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="hotdog_detector" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="object_detector" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,37 +31,11 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNH-FO-Vjq" userLabel="imageSelectorView">
-                                        <rect key="frame" x="152" y="744" width="110" height="110"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CE7-ac-DOf">
-                                                <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <imageReference key="image" image="camera.fill" catalog="system" symbolScale="large"/>
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
-                                                    </preferredSymbolConfiguration>
-                                                </state>
-                                                <connections>
-                                                    <action selector="selectImageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ctu-PP-7FQ"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                        <constraints>
-                                            <constraint firstItem="CE7-ac-DOf" firstAttribute="centerY" secondItem="lNH-FO-Vjq" secondAttribute="centerY" id="ZaG-4J-gF5"/>
-                                            <constraint firstItem="CE7-ac-DOf" firstAttribute="height" secondItem="lNH-FO-Vjq" secondAttribute="height" id="aTc-9T-RHB"/>
-                                            <constraint firstItem="CE7-ac-DOf" firstAttribute="centerX" secondItem="lNH-FO-Vjq" secondAttribute="centerX" id="cn2-yK-50q"/>
-                                            <constraint firstItem="CE7-ac-DOf" firstAttribute="width" secondItem="lNH-FO-Vjq" secondAttribute="width" id="wEI-Sf-5Xu"/>
-                                        </constraints>
-                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GZB-ut-Qpa" userLabel="photos select from gallery">
-                                        <rect key="frame" x="289" y="744" width="110" height="110"/>
+                                        <rect key="frame" x="274" y="796.5" width="125" height="57.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ite-DO-u5L">
-                                                <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="57.5"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="photo.fill.on.rectangle.fill" catalog="system">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
@@ -79,24 +54,47 @@
                                             <constraint firstItem="Ite-DO-u5L" firstAttribute="centerX" secondItem="GZB-ut-Qpa" secondAttribute="centerX" id="vT4-rQ-Z7R"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNH-FO-Vjq" userLabel="imageSelectorView">
+                                        <rect key="frame" x="167" y="787.5" width="80" height="76"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CE7-ac-DOf">
+                                                <rect key="frame" x="12" y="16.5" width="56" height="43"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="camera.fill" catalog="system" symbolScale="large"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                    </preferredSymbolConfiguration>
+                                                </state>
+                                                <connections>
+                                                    <action selector="selectImageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ctu-PP-7FQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="lNH-FO-Vjq" secondAttribute="height" multiplier="20:19" id="8w4-xt-laC"/>
+                                            <constraint firstItem="CE7-ac-DOf" firstAttribute="centerY" secondItem="lNH-FO-Vjq" secondAttribute="centerY" id="IKi-Vi-BLc"/>
+                                            <constraint firstAttribute="width" constant="80" id="LvG-ed-cxA"/>
+                                            <constraint firstItem="CE7-ac-DOf" firstAttribute="centerX" secondItem="lNH-FO-Vjq" secondAttribute="centerX" id="PBx-B5-WpZ"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="vjI-0H-vk7" firstAttribute="top" secondItem="Vgq-Jb-m3t" secondAttribute="top" id="1mr-RY-jYV"/>
+                                    <constraint firstItem="lNH-FO-Vjq" firstAttribute="centerY" secondItem="Ite-DO-u5L" secondAttribute="centerY" id="4ww-Je-R0j"/>
                                     <constraint firstItem="MZQ-Ye-lhD" firstAttribute="top" secondItem="vjI-0H-vk7" secondAttribute="bottom" id="63V-CA-CAr"/>
-                                    <constraint firstItem="GZB-ut-Qpa" firstAttribute="height" secondItem="CE7-ac-DOf" secondAttribute="height" id="7HX-bJ-EAS"/>
-                                    <constraint firstItem="lNH-FO-Vjq" firstAttribute="width" secondItem="Vgq-Jb-m3t" secondAttribute="width" multiplier="0.2657" id="9zI-TP-uWn"/>
                                     <constraint firstAttribute="trailing" secondItem="GZB-ut-Qpa" secondAttribute="trailing" constant="15" id="KbG-Tl-BW7"/>
                                     <constraint firstAttribute="bottom" secondItem="GZB-ut-Qpa" secondAttribute="bottom" constant="42" id="a93-oy-18E"/>
                                     <constraint firstAttribute="trailing" secondItem="MZQ-Ye-lhD" secondAttribute="trailing" constant="15" id="aU7-6c-2k6"/>
-                                    <constraint firstItem="lNH-FO-Vjq" firstAttribute="centerX" secondItem="Vgq-Jb-m3t" secondAttribute="centerX" id="b2l-pe-d23"/>
                                     <constraint firstAttribute="trailing" secondItem="vjI-0H-vk7" secondAttribute="trailing" constant="15" id="eYP-a4-L5I"/>
                                     <constraint firstItem="GZB-ut-Qpa" firstAttribute="leading" secondItem="lNH-FO-Vjq" secondAttribute="trailing" constant="27" id="g1g-01-exB"/>
                                     <constraint firstItem="vjI-0H-vk7" firstAttribute="height" secondItem="Vgq-Jb-m3t" secondAttribute="height" multiplier="0.7745" id="gRk-0d-Qwg"/>
                                     <constraint firstItem="vjI-0H-vk7" firstAttribute="leading" secondItem="Vgq-Jb-m3t" secondAttribute="leading" constant="15" id="iXw-fh-SUS"/>
-                                    <constraint firstItem="lNH-FO-Vjq" firstAttribute="height" secondItem="Vgq-Jb-m3t" secondAttribute="height" multiplier="0.122768" id="mHg-4S-HxK"/>
+                                    <constraint firstItem="lNH-FO-Vjq" firstAttribute="centerX" secondItem="Vgq-Jb-m3t" secondAttribute="centerX" id="nES-dc-Acm"/>
                                     <constraint firstItem="MZQ-Ye-lhD" firstAttribute="leading" secondItem="Vgq-Jb-m3t" secondAttribute="leading" constant="15" id="vMW-Tg-SwG"/>
-                                    <constraint firstAttribute="bottom" secondItem="lNH-FO-Vjq" secondAttribute="bottom" constant="42" id="ynb-TF-dXE"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -144,7 +142,7 @@
     </scenes>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
-        <image name="photo.fill.on.rectangle.fill" catalog="system" width="128" height="96"/>
+        <image name="photo.fill.on.rectangle.fill" catalog="system" width="128" height="97"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

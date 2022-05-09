@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED0630622828DD7900BF2C63 /* Inceptionv3.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = ED0630612828DD7900BF2C63 /* Inceptionv3.mlpackage */; };
 		EDC6A6FF265F79F000BD5D2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC6A6FE265F79F000BD5D2F /* AppDelegate.swift */; };
 		EDC6A701265F79F000BD5D2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC6A700265F79F000BD5D2F /* SceneDelegate.swift */; };
 		EDC6A703265F79F000BD5D2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC6A702265F79F000BD5D2F /* ViewController.swift */; };
 		EDC6A706265F79F000BD5D2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDC6A704265F79F000BD5D2F /* Main.storyboard */; };
 		EDC6A708265F79F800BD5D2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDC6A707265F79F800BD5D2F /* Assets.xcassets */; };
 		EDC6A70B265F79F800BD5D2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDC6A709265F79F800BD5D2F /* LaunchScreen.storyboard */; };
-		EDC6A714265F7B8400BD5D2F /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EDC6A713265F7B8400BD5D2F /* Inceptionv3.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED0630612828DD7900BF2C63 /* Inceptionv3.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = Inceptionv3.mlpackage; sourceTree = "<group>"; };
 		EDC6A6FB265F79F000BD5D2F /* object detector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "object detector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDC6A6FE265F79F000BD5D2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDC6A700265F79F000BD5D2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,8 +26,7 @@
 		EDC6A707265F79F800BD5D2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDC6A70A265F79F800BD5D2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDC6A70C265F79F800BD5D2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EDC6A713265F7B8400BD5D2F /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
-		EDC6A716265FAAB200BD5D2F /* hotdog detector.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "hotdog detector.entitlements"; sourceTree = "<group>"; };
+		EDC6A716265FAAB200BD5D2F /* object detector.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "object detector.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 		EDC6A6FD265F79F000BD5D2F /* object detector */ = {
 			isa = PBXGroup;
 			children = (
-				EDC6A716265FAAB200BD5D2F /* hotdog detector.entitlements */,
+				EDC6A716265FAAB200BD5D2F /* object detector.entitlements */,
 				EDC6A6FE265F79F000BD5D2F /* AppDelegate.swift */,
 				EDC6A700265F79F000BD5D2F /* SceneDelegate.swift */,
 				EDC6A702265F79F000BD5D2F /* ViewController.swift */,
@@ -67,7 +67,7 @@
 				EDC6A707265F79F800BD5D2F /* Assets.xcassets */,
 				EDC6A709265F79F800BD5D2F /* LaunchScreen.storyboard */,
 				EDC6A70C265F79F800BD5D2F /* Info.plist */,
-				EDC6A713265F7B8400BD5D2F /* Inceptionv3.mlmodel */,
+				ED0630612828DD7900BF2C63 /* Inceptionv3.mlpackage */,
 			);
 			path = "object detector";
 			sourceTree = "<group>";
@@ -142,8 +142,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED0630622828DD7900BF2C63 /* Inceptionv3.mlpackage in Sources */,
 				EDC6A703265F79F000BD5D2F /* ViewController.swift in Sources */,
-				EDC6A714265F7B8400BD5D2F /* Inceptionv3.mlmodel in Sources */,
 				EDC6A6FF265F79F000BD5D2F /* AppDelegate.swift in Sources */,
 				EDC6A701265F79F000BD5D2F /* SceneDelegate.swift in Sources */,
 			);
@@ -294,7 +294,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "object detector/object detector.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2YZB8B988D;
+				DEVELOPMENT_TEAM = 6RQ3QBHPUV;
 				INFOPLIST_FILE = "object detector/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -315,7 +315,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "object detector/object detector.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2YZB8B988D;
+				DEVELOPMENT_TEAM = 6RQ3QBHPUV;
 				INFOPLIST_FILE = "object detector/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
